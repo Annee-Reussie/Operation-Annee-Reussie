@@ -1,0 +1,30 @@
+<h1 class="page-title">Admin Page</h1>
+<div class="page-grid">
+    <% if (loggedIn === false) { %>
+        <div class="grid-item">
+            <section class="content log-in">
+                <h2>Log In</h2>
+                <form action="/admin" method="post">
+                    <div class="form-item">
+                        <label for="passwd">Password</label>
+                        <input type="password" id="passwd" name="passwd" placeholder="Enter your password" required>
+                    </div>
+                    <div class="btn-grid">
+                        <a class="btn btn-primary" href="/admin">Cancel</a>
+                        <button class="btn btn-primary" type="submit">Log In</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    <% } else if (loggedIn === true) { %>
+        <div class="grid-item">
+            <section class="content log-in">
+                <h2>Machine Virtuel</h2>
+                <form action="/admin" method="post">
+                    <h3 class="grid-item">Admin VM</h3>
+                    <a class="btn btn-primary" href="/admin/chef-vm">Connect</a>
+                </form>
+            </section>
+        </div>
+    <% } %>
+</div>

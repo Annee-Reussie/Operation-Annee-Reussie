@@ -1,0 +1,47 @@
+<% if (loggedInChefVM === false) { %>
+    <div class="linux-log-in-bg">
+        <form action="/admin/chef-vm" method="post">
+            <div class="vm-log-in">
+                <label for="passwd">Password</label>
+                <input type="password" id="passwd" name="passwd" placeholder="Enter your password" required>
+            </div>
+            <div class="vm-log-in-btn">
+                <a class="btn btn-danger" href="/admin">Exit</a>
+                <button class="btn btn-primary" type="submit">Log In</button>
+            </div>
+        </form>
+        <button class="btn btn-primary vm-hint-btn" onclick="alert('Check Source Code? F12')">Aide</button>
+    </div>
+    <!-- /admin/chef-vm/passwd-vm -->
+<% } else if (loggedInChefVM === true) { %>
+    <div class="vm-grid">
+        <% if (secretURL === '') { %>
+            <form action="/admin/chef-vm" method="post">
+                <button class="secret-folder" type="submit" onclick="alert('Good job, the secret url is generated, click one more time in this folder to see the secret url!')"><img src="https://cdn.discordapp.com/attachments/1071222520516194335/1074484484889657404/folder-open.png" alt="Logo"></button>
+            </form>
+        <% } else { %>
+                <button class="secret-folder" type="submit" onclick="alert('<%= secretURL %>')"><img src="https://cdn.discordapp.com/attachments/1071222520516194335/1074484484889657404/folder-open.png" alt="Logo"></button>
+                <!-- /admin/secretURL -->
+        <% } %>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)"><img id="drag1" draggable="true" ondragstart="drag(event)" src="https://cdn.discordapp.com/attachments/1071222520516194335/1074484483761385564/folder-documents.png" alt=""></div>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)"><img id="drag2" draggable="true" ondragstart="drag(event)" src="https://cdn.discordapp.com/attachments/1071222520516194335/1074484484000464947/folder-download.png" alt=""></div>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)"><img id="drag3" draggable="true" ondragstart="drag(event)" src="https://cdn.discordapp.com/attachments/1071222520516194335/1074484484268892290/folder-drag-accept.png" alt=""></div>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)"><img id="drag4" draggable="true" ondragstart="drag(event)" src="https://cdn.discordapp.com/attachments/1071222520516194335/1074484484675743756/folder-music.png" alt=""></div>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)"><img id="drag5" draggable="true" ondragstart="drag(event)" src="https://cdn.discordapp.com/attachments/1071222520516194335/1074484484889657404/folder-open.png" alt=""></div>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)"><img id="drag6" draggable="true" ondragstart="drag(event)" src="https://cdn.discordapp.com/attachments/1071222520516194335/1074484485103558726/folder-pictures.png" alt=""></div>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)"><img id="drag7" draggable="true" ondragstart="drag(event)" src="https://cdn.discordapp.com/attachments/1071222520516194335/1074484485334249655/folder-publicshare.png" alt=""></div>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)"><img id="drag8" draggable="true" ondragstart="drag(event)" src="https://cdn.discordapp.com/attachments/1071222520516194335/1074484485804011651/folder-saved-search.png" alt=""></div>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)"><img id="drag9" draggable="true" ondragstart="drag(event)" src="https://cdn.discordapp.com/attachments/1071222520516194335/1074484486068256909/folder-templates.png" alt=""></div>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)"><img id="drag10" draggable="true" ondragstart="drag(event)" src="https://cdn.discordapp.com/attachments/1071222520516194335/1074484519433932930/folder-videos.png" alt=""></div>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)"><img id="drag11" draggable="true" ondragstart="drag(event)" src="https://cdn.discordapp.com/attachments/1071222520516194335/1074484519727542342/folder.png" alt=""></div>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)"><img id="drag12" draggable="true" ondragstart="drag(event)" src="https://cdn.discordapp.com/attachments/1071222520516194335/1074484519995973652/network-server.png" alt=""></div>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)"><img id="drag13" draggable="true" ondragstart="drag(event)" src="https://cdn.discordapp.com/attachments/1071222520516194335/1074484520344105081/network-workgroup.png" alt=""></div>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)"><img id="drag14" draggable="true" ondragstart="drag(event)" src="https://cdn.discordapp.com/attachments/1071222520516194335/1074484520696422491/user-bookmarks.png" alt=""></div>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)"><img id="drag15" draggable="true" ondragstart="drag(event)" src="https://cdn.discordapp.com/attachments/1071222520516194335/1074484520985825330/user-desktop.png" alt=""></div>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)"><img id="drag16" draggable="true" ondragstart="drag(event)" src="https://cdn.discordapp.com/attachments/1071222520516194335/1074484521317183558/user-home.png" alt=""></div>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+    <button class="btn btn-primary vm-hint-btn" onclick="alert('Trouve le code (secretURL) dans les dossiers! Utilise ce code dans URL: /admin/secretURL')">Aide</button>
+<% } %>

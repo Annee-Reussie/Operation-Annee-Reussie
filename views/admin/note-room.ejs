@@ -1,0 +1,26 @@
+<h1 class="page-title">Salle Des Notes</h1>
+<div class="page-grid">
+    <% if (loggedIn === false) { %>
+        <div class="grid-item">
+            <section class="content log-in">
+                <h2>Log In</h2>
+                <form action="/admin/note-room" method="post">
+                    <div class="form-item">
+                        <label for="passwd">Password</label>
+                        <input type="text" id="passwd" name="passwd" placeholder="Une chèvre qui s'appelle?" required>
+                    </div>
+                    <div class="btn-grid">
+                        <a class="btn btn-primary" href="/game/chapter3">Cancel</a>
+                        <button class="btn btn-primary" type="submit">Log In</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    <% } else if (loggedIn === true) { %>
+        <section class="content diagonal-negative">
+            <h2>Après avoir trouvé ton dossier, tu modifies tes notes pour pouvoir valider ton année.</h2>
+        </section>
+        <a class="btn btn-primary" href="/game/chapter4">Next Chapter</a>
+    <% } %>
+</div>
+

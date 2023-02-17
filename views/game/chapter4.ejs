@@ -1,0 +1,28 @@
+<h1 class="page-title">Chapter 4</h1>
+<div class="page-grid">
+    <section class="content diagonal-positive">
+        <h2>Vous</h2>
+        <p>C’est bon les gars j’ai modifier mes notes. Je vais pouvoir rester avec vous l’année prochaine</p>
+    </section>
+    <section class="content diagonal-negative">
+        <h2>Julien</h2>
+        <p>Alors c’était comment, t’as eu le temps ?</p>
+    </section>
+    <section class="content diagonal-positive">
+        <h2>Vous</h2>
+        <p>Je vous avoue c’était chaud, j’ai entendu le chef du département revenir en même temps que je partais. Mais j’ai réussi !</p>
+    </section>
+    <section class="content diagonal-negative">
+        <h2>Lucas</h2>
+        <p>Ouais c’est ça, tu me doit quelque chose maintenant. J’ai risqué mon année pour toi</p>
+    </section>
+    <section class="content diagonal-negative">
+        <h2>Vous</h2>
+        <p>Merci mon gars, t’inquiète je te revaudrais ça.</p>
+    </section>
+    <% if (gameEnd === true) { %>
+        <a class="btn btn-primary" href="/game/end">END</a>
+    <% } else { %>
+        <a class="btn btn-primary" href="/admin/note-room">You Cheated!</a>
+    <% } %>
+</div>

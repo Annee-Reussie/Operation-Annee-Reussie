@@ -1,0 +1,42 @@
+<h1 class="page-title">Chapter 2: Discussion sur le groupe snap</h1>
+<div class="page-grid">
+
+
+    <section class="content diagonal-positive">
+        <h2>Lucas</h2>
+        <p>Je suis trop fort, bon j’avoue que mettre un gros post-it jaune fluo avec le code en binaire c’est pas très sécurisé…</p>
+    </section>
+    <section class="content">
+        <h2>Lucas retourne donc voir ses collègues, il a maintenant accès au journal intime du chef de département.</h2>
+    </section>
+    <section class="content diagonal-positive">
+        <h2>Lucas (sur le groupe snap)</h2>
+        <p>Ouais les gars, vous savez que le chef du dép il à une chèvre qui s'appelle Milka?</p>
+    </section>
+    <section class="content diagonal-negative">
+        <h2>Julien (sur le groupe snap)</h2>
+        <p>WESH COMMENT TU SAIS ÇA, T’A LE LIEN????</p>
+    </section>
+    <section class="content diagonal-positive">
+        <h2>Chiheb</h2>
+        <p>Voilà mon gars, bon maintenant le plus important, t'as trouvé le code?</p>
+    </section>
+    <section class="content diagonal-negative">
+        <h2>Lucas</h2>
+        <p>Quel code?</p>
+    </section>
+    <section class="content diagonal-positive">
+        <h2>Mathias</h2>
+        <p>On va te mêler Lucas</p>
+    </section>
+    <section class="content diagonal-negative">
+        <h2>Tyméo</h2>
+        <p>Mais toi t'es vraiment à l’ouest t'es bête ou quoi, on doit avoir le code de la salle des notes, pas savoir si le chef du dép à une chèvre ou un poisson qui s’appel Dora</p>
+    </section>
+    <% if (secretURL !== '') { %>
+        <a class="btn btn-primary" href="/admin/<%= secretURL %>">Secret Page</a>
+        <a class="btn btn-primary" href="/game/chapter3">Next Chapter</a>
+    <% } else { %>
+        <button class="btn btn-primary" onclick="alert('Vous avez pas trouver encore le lien secret!')">Secret Page</button>
+    <% } %>
+</div>

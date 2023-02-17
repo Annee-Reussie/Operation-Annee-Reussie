@@ -1,0 +1,48 @@
+<h1 class="page-title">Chapter 3</h1>
+<div class="page-grid">
+    <section class="content diagonal-negative">
+        <!-- Verify The Code -->
+        <% if (valideCode === false) { %>
+            <h2>Verifier le code:</h2>
+            <form action="/game/chapter3" method="post">
+                <div class="form-item">
+                    <label for="passwd">Code</label>
+                    <input type="text" id="passwd" name="passwd" placeholder="Entrer le code" required>
+                </div>
+                <div>
+                    <button class="btn btn-primary" type="submit">Test</button>
+                </div>
+            </form>
+            <div><%= finalCode %></div>
+        <% } else { %>
+            <h2>Le code est Valide!</h2>
+        <% } %>
+    </section>
+    <section class="content diagonal-negative">
+        <h2>Bilal</h2>
+        <p>
+            J’ai enfin le code, vous devinerez jamais, il l’a caché dans un poème…
+            <% if (finalCode !== '') { %>
+                Le code est <%= finalCode %>
+            <% } %>
+        </p>
+    </section>
+    <section class="content diagonal-positive">
+        <h2>Mateo</h2>
+        <p>Comment peut-on être sûr que ce soit le bon code?</p>
+    </section>
+    <section class="content diagonal-negative">
+        <h2>Axel</h2>
+        <p>Il faut tester, pas d’autres choix…</p>
+    </section>
+    <section class="content diagonal-positive">
+        <h2>Vous</h2>
+        <p>J’irais demain après le cours de PPP, j’irais tout seul, vous, montez la garde.</p>
+    </section>
+    <section class="content">
+        <h2>Vous allez maintenant vous introduire dans la salle des notes. Il faut que vous trouviez votre dossier.</h2>
+    </section>
+    <% if (valideCode === true) { %>
+        <a class="btn btn-primary" href="/admin/note-room">Salle des notes</a>
+    <% } %>
+</div>
